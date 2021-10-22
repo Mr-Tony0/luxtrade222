@@ -1,0 +1,264 @@
+@import 'titleBlock.scss';
+.popular{
+	width: 100%;
+	&__content{
+		width: 100%;
+		position: relative;
+		margin-top: 100px;		
+	}
+	&__slid{
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		text-align: center;
+		padding:40px;
+	}
+	&__bet{
+		display: flex;
+		align-items: baseline;
+		flex: 1 1 auto;
+	}
+	&__center{
+		display: flex;
+		flex-direction:column;
+		flex:1 1 auto;
+		position: relative;
+		&:after{
+			content:'';
+			position: absolute;
+			height: 78px;
+			width: 78px;
+			background: transparent;
+			border:1px solid $element;
+			top: 50%;
+			left: 50%;
+			transform:translate(-50%,-50%) rotate(45deg);
+		}
+		span{
+			margin:10px;
+			&:last-child{
+				margin-top:0px;
+			}
+			&:first-child{
+				margin-bottom:0px;
+			}
+		}
+	}
+	&__img{
+		max-width: 100%;
+		width: 100%;
+		object-fit:cover;
+		object-position:center;
+	}
+	&__imgBlock{
+		width: 100%;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 100px;	
+			height: 100px;
+			left: 50%;
+			z-index: 0;	
+			top: 100%;	
+			background: #fff;	
+			transform:translate(-50%, -40%) rotate(45deg);
+		}
+
+	}
+	&__timer{
+		position: absolute;
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		justify-content: center;
+		left: 50%;
+		top: 100%;
+		transform:translate(-50%, -100%);
+		z-index: 3;
+		span{
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				background:url('../img/time.png') center / contain no-repeat;
+				height: 14px;	
+				width: 14px;
+				top: -50%;	
+				left: 50%;
+				transform:translate(-50%, -50%);		
+			}
+		}
+	}
+	&__price{
+  		font-size: 50px;
+ 		font-family: "Bravo";
+ 		color: #1c242a;
+ 		line-height: 74%;
+	}
+	&__aside{
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid $element;
+	}
+	&__title{
+		z-index: 2;
+	}
+	&__square{
+		background: #1c242a;
+		height: 16px;
+		width: 16px;
+		margin:6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform:rotate(45deg);
+	}
+	&__icon{
+		max-width: 100%;
+		transform:rotate(-45deg);
+	}
+	&__button{
+		@include button();
+		@include border();
+		color:#000;
+		width: 200px;
+		height: 50px;
+		margin-top:30px;
+		&:hover{
+			color:#fff;
+		}
+	}
+	&__row{
+		width: 100%;
+		display: flex;	
+		justify-content: center;
+		align-items: center;
+		span{
+			width: 10px;	
+			height: 10px;
+			border-radius: 50%;
+			border:1px solid $element;	
+		}		
+	}
+	&__allLots{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100px;
+   		background-image:linear-gradient(top, #C3A673, #8E652F);
+		border-radius:50%;
+		z-index: 2;
+		position: relative;
+		color: #000;
+		font-family: pfd;
+		font-size: 21px;
+		margin: 0 10px 0 10px;
+		font-weight: 500;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 94%;
+			height: 94%;
+			background: white;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			z-index: -1;
+			opacity: 1;
+			transform:translate(-50%,-50%);
+			transition:$transition;
+		}
+		&:hover{
+			&:after{
+				opacity: 0;
+			}
+			color:#fff;
+		}
+	}
+	/* Слайдер */
+	.slick-slider{
+		overflow: hidden;
+	}
+
+	/* Слайдер запущен */
+	.slick-slider.slick-initialized{}
+	/* Слайдер с точками */
+	.slick-slider.slick-dotted{}
+	/* Ограничивающая оболочка */
+	.slick-list {
+	}
+	/* Лента слайдов */
+	.slick-track{
+		display: flex;
+		justify-content: space-between;
+	}
+	/* Слайд */
+	.slick-slide{
+
+	}
+	/* Слайд активный (показывается) */
+	.slick-slide.slick-active{
+		
+	}
+	/* Слайд основной */
+	.slick-slide.slick-current{
+	
+	}
+	/* Слайд по центру */
+	.slick-slide.slick-center{}
+	/* Клонированный слайд */
+	.slick-slide.slick-cloned{}
+	/* Стрелка */
+	.slick-arrow{
+		font-size: 0;
+		background:url('../img/slider-arrow.png') center / contain no-repeat;
+		height: 36px;
+		width: 100px;
+		border:0;
+		position: absolute;
+		bottom: 32px;	
+		transform:transform(-50%,0);
+	}
+	/* Стрелка влево */
+	.slick-arrow.slick-prev{
+		left: 30%;
+	}
+	/* Стрелка вправо */
+	.slick-arrow.slick-next{
+		right: 30%;
+		transform:rotate(180deg);
+	}
+	/* Стрелка не активная */
+	.slick-arrow.slick-disabled{}
+	/* Точки (булиты) */
+	.slick-dots{}
+	.slick-dots li{}
+	/* Активная точка */
+	.slick-dots li.slick-active{}
+	/* Элемент точки */
+	.slick-dots li button{}
+	@media(max-width: 850px){
+		&__row{
+			span{
+				display: none;	
+			}
+		}
+	}
+	@media(max-width: 600px){
+		.slick-arrow.slick-prev{
+			left: 20%;
+		}
+		.slick-arrow.slick-next{
+			right: 20%;
+		}
+	}
+	@media (max-width: 500px){
+		&__slid{
+			max-width: 320px;
+		}
+	}
+}

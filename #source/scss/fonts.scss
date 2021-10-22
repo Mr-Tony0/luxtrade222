@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face {
+	font-family: 'Bravo';
+	src: url('../fonts/BravoRGRegular.eot');
+	src: local('☺'), url('../fonts/Bravo/BravoRGRegular.woff') format('woff'), url('../fonts/Bravo/BravoRGRegular.ttf') format('truetype'), url('../fonts/Bravo/BravoRGRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ceremonious';
+	src: url('../fonts/ceremonious/ceremonious_one.eot');
+	src: local('☺'), url('../fonts/ceremonious/ceremonious_one.woff') format('woff'), url('../fonts/ceremonious/ceremonious_one.ttf') format('truetype'), url('../fonts/ceremonious/ceremonious_one.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'pfd';
+	src: url('../fonts/pfd/pfdintextcondpro-regular.eot');
+	src: local('☺'), url('../fonts/pfd/pfdintextcondpro-regular.woff') format('woff'), url('../fonts/pfd/pfdintextcondpro-regular.ttf') format('truetype'), url('../fonts/pfd/pfdintextcondpro-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'pfd';
+	src: url('../fonts/pfd/pfdintextcondpro-medium.eot');
+	src: local('☺'), url('../fonts/pfd/pfdintextcondpro-medium.woff') format('woff'), url('../fonts/pfd/pfdintextcondpro-medium.ttf') format('truetype'), url('../fonts/pfd/pfdintextcondpro-medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Idealist';
+	src: url('../fonts/idealist/Glen Jan - IdealistSans.eot');
+	src: local('☺'), url('../fonts/idealist/Glen Jan - IdealistSans.woff') format('woff'), url('../fonts/idealist/Glen Jan - IdealistSans.ttf') format('truetype'), url('../fonts/idealist/Glen Jan - IdealistSans.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-family:'PT Sans';
+}
+a{
+	text-decoration: none;
+}
+h2,h3{
+	font-weight: 500;
+}
+h3{
+	font-size: 21px;
+}
+h1,h2{
+	font-size: 35px;
+}
+h2,h1,h3{
+	font-family: 'pfd';
+	display: flex;
+	flex-direction:column;	
+	span{
+		font-family: 'ceremonious';
+		font-size: 40px;
+		color:$element
+	}
+}

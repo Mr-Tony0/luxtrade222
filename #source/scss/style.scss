@@ -1,0 +1,33 @@
+//		***Основные стили***
+
+
+@import 'default.scss';
+@import 'color.scss';
+@import 'fonts.scss';
+@import 'mixin.scss';
+$transition:all 0.4s ease 0s;
+
+//		***Стили блоков***
+
+
+@import './blocks/header.scss';
+@import './blocks/mainSlider.scss';
+@import './blocks/popular.scss';
+@import './blocks/categories.scss';
+@import './blocks/services.scss';
+@import './blocks/titleBlock.scss';
+@import './blocks/quotes.scss';
+@import './blocks/footer.scss';
+
+.container{
+	max-width: 925px;
+	margin: 0 auto;
+}
+body{
+	@media (max-width: 770px) {
+		&.active{
+			overflow: hidden;
+		}
+		
+	}
+}

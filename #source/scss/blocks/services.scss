@@ -1,0 +1,85 @@
+@import 'titleBlock.scss';
+.services{
+	width: 100%;
+	background: $block;
+	.titleBlock__centerContent{
+		background: $block;
+	}
+	.titleBlock__title{
+		color: #fff;
+	}
+	&__content{
+		width: 100%;
+		//padding:60px 0 100px 0;
+		margin-top:75px; 
+		padding:60px 20px 100px 20px; 
+	}
+	&__flexBox{
+		display: flex;
+		align-items: center;
+		flex-wrap:wrap;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+	&__item{
+		flex:1 1 30%;
+		display: flex;
+		flex-direction:column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+	}
+	&__title{
+		color: #fff;
+ 		font-size: 21px;
+  		text-transform: uppercase;
+ 		line-height: 1.19;
+	}
+	&__img{
+		min-height: 186px;
+		min-width: 186px;
+	}
+	&__text{
+	  font-size: 15px;
+	  color: $element;
+	  line-height: 1.667;
+	}
+	&__button{
+		display: flex;
+		justify-content: center;
+		align-items: center;			
+	 	color: #fff;
+	  	text-transform: uppercase;
+		font-family: pfd;
+  		font-size: 21px;
+ 		text-transform: uppercase;
+ 		line-height: 1.19;
+ 		width: 250px;
+ 		position: relative;
+ 		&:after,&:before{
+ 			content: '';
+ 			position: absolute;
+ 			top: 50%;
+ 			transform:translate(0%,-50%);
+ 			height: 1px;
+ 			background: $element;
+ 			width: 24%;
+ 			transition:$transition;
+ 		}
+ 		&:after{
+ 			left: 0px;
+ 		}
+ 		&:before{
+ 			right: 0px;
+ 		}
+ 		&:hover{
+ 			&:after{
+ 				left: 10px;
+	 		}
+	 		&:before{
+	 			right: 10px;
+	 		}
+ 		}
+	}
+}

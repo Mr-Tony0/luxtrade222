@@ -1,0 +1,170 @@
+.mainSlider{
+	width: 100%;
+	position: relative;
+	&:after{
+		content:'';
+		display: flex;
+		justify-content: center;
+		align-items: center;			
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background:#fff;
+		top: 96%;	
+		left: 50%;
+		transform:translate(-50%, 0) rotate(45deg);
+	}
+	&__slider{
+		overflow: hidden;	
+	}
+	&__content{
+		text-align: center;
+		padding: 50px 25px 100px 25px;
+	}
+	&__title{
+		margin-bottom:34px;
+		color:#fff;
+		span{
+			margin:34px 0 34px 0;
+		}
+	}
+	&__text{
+		color:#fff;
+	}
+	&__button{
+		width: 244px;
+  		height: 44px;
+  		margin: 0 auto;
+  		margin-top:60px;
+  		transition:$transition;
+  		@include button();
+  		@include border();
+	}
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		object-fit:cover;
+		object-position:center;
+		transform:scale(1,1.13)		
+	}
+	/* Слайдер */
+	.slick-slider{}
+	/* Слайдер запущен */
+	.slick-slider.slick-initialized{}
+	/* Слайдер с точками */
+	.slick-slider.slick-dotted{}
+	/* Ограничивающая оболочка */
+	.slick-list {}
+	/* Лента слайдов */
+	.slick-track{
+		display: flex;
+		overflow: hidden;	
+	}
+	/* Слайд */
+	.slick-slide{
+		position: relative;
+	}
+	/* Слайд активный (показывается) */
+	.slick-slide.slick-active{
+		width: 100%;
+		z-index: 2;
+	}
+	/* Слайд основной */
+	.slick-slide.slick-current{}
+	/* Слайд по центру */
+	.slick-slide.slick-center{}
+	/* Клонированный слайд */
+	.slick-slide.slick-cloned{}
+	/* Стрелка */
+	.slick-arrow{
+		position: absolute;
+		font-size: 0;	
+		top: 100%;
+		border:0;
+		transform:translate(-220%,-50%);
+		z-index:1;
+		height: 30px;
+		width: 15px;		
+		background:url('../img/arrow.png')center / cover no-repeat;	
+	}
+	/* Стрелка влево */
+	.slick-arrow.slick-prev{
+		left: 50%;
+	}
+	/* Стрелка вправо */
+	.slick-arrow.slick-next{
+		left: 50%;
+		//top: 97%;
+		transform:translate(120%,-50%) rotate(180deg);
+	}
+	/* Стрелка не активная */
+	.slick-arrow.slick-disabled{}
+	/* Точки (булиты) */
+	.slick-dots{
+		position: absolute;
+		top: 96%;	
+		left: 50%;
+		z-index: 1;
+		//width: 50px;		
+		display: flex;
+		align-items: center;
+		padding: 0;		
+		list-style: none;	
+		background: #fff;
+		transform:translate(-50%,0);	
+	}
+	.slick-dots li{
+		background: transparent;
+		border:1px solid $element;
+		margin:0 3px 0 3px;
+		width: 7px;
+  		height: 7px;
+  		transform:rotate(45deg);
+
+	}
+	/* Активная точка */
+	.slick-dots li.slick-active{
+		background: $element;
+	}
+	/* Элемент точки */
+	.slick-dots li button{
+		display: none;	
+	}
+	@media(max-width: 650px){
+		&__title{
+			font-size: 28px;
+			span{
+				font-size: 32px;	
+			}
+		}
+		&__text{
+			font-size: 14px;	
+		}
+		&__content{
+			padding:30px 25px 60px 25px;
+		}
+		&__button{
+			margin-top:40px;
+		}
+		.slick-dots{
+			top: 95.4%;
+		}	
+	}
+	@media(max-width: 550px){
+		&__title{
+			span{
+				margin: 24px 0 24px 0;
+			}
+		}
+		&__content{
+			padding:20px 25px 40px 25px;
+		}
+		&__button{
+			margin-top:30px;
+			width: 204px;
+  			height: 36px;
+		}
+	}
+}
